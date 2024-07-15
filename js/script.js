@@ -32,3 +32,13 @@ setTimeout(function () {
 
     }, 30000);
 });
+
+// Funzione per generare numeri casuali unici
+function generatenumerirandom(count, min, max) {
+    const numeri = new Set();
+    while (numeri.size < count) {
+        const number = Math.floor(Math.random() * (max - min + 1)) + min;
+        numeri.add(number);
+    }
+    return [...numeri];
+}
