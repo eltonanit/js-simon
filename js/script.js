@@ -22,18 +22,18 @@ setTimeout(function () {
             }
         }
 
-        // Verifichiamo quanti e quali numeri sono stati individuati
+        // Verifica dei numeri indovonati
         const numerogiusto = numerirandom.filter(num => user.includes(num));
         result.innerHTML = `
             <h3>Risultato:</h3>
-            <p>Hai indovinato ${numerogiusto.length} numeri su 5.</p>
+            <p>Numeri indovinati ${numerogiusto.length} numeri su 5.</p>
             <p>Numeri corretti: ${numerogiusto.join(', ')}</p>
         `;
 
-    }, 30000);
+    }, 8000);
 });
 
-// Funzione per generare numeri casuali unici
+// Funzione per generare numeri casuali
 function generatenumerirandom(count, min, max) {
     const numeri = new Set();
     while (numeri.size < count) {
